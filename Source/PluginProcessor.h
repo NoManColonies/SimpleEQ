@@ -114,6 +114,11 @@ private:
     }
   }
 
+  void updateLowCutFilter(const ChainSettings &chainSettings);
+  void updateHighCutFilter(const ChainSettings &chainSettings);
+
+  void updateFilter();
+
   //==============================================================================
   JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(SimpleEQAudioProcessor)
 };
