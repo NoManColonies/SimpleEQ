@@ -134,7 +134,10 @@ enum Slope { Slope_12, Slope_24, Slope_36, Slope_48 };
 struct ChainSettings {
   float peakFreg{0}, peakGainInDecibels{0}, peakQuality{1.f};
   float lowCutFreg{0}, highCutFreg{0};
+
   Slope lowCutSlope{Slope::Slope_12}, highCutSlope{Slope::Slope_12};
+
+  bool lowCutBypassed{false}, peakBypassed{false}, highCutBypassed{false};
 };
 
 ChainSettings getChainSettings(juce::AudioProcessorValueTreeState &apvts);
